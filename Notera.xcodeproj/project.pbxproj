@@ -13,6 +13,12 @@
 		5C17EB5029B6559700427AC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C17EB4F29B6559700427AC1 /* Preview Assets.xcassets */; };
 		5C17EB5829B655EA00427AC1 /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = 5C17EB5629B655EA00427AC1 /* LICENCE */; };
 		5C17EB5929B655EA00427AC1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5C17EB5729B655EA00427AC1 /* README.md */; };
+		5C17EB5D29B65A2300427AC1 /* Notera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C17EB5B29B65A2300427AC1 /* Notera.xcdatamodeld */; };
+		5C17EB6329B65B2A00427AC1 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17EB5F29B65B2A00427AC1 /* Note+CoreDataClass.swift */; };
+		5C17EB6429B65B2A00427AC1 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17EB6029B65B2A00427AC1 /* Note+CoreDataProperties.swift */; };
+		5C17EB6529B65B2A00427AC1 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17EB6129B65B2A00427AC1 /* Tag+CoreDataClass.swift */; };
+		5C17EB6629B65B2A00427AC1 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17EB6229B65B2A00427AC1 /* Tag+CoreDataProperties.swift */; };
+		5C17EB6929B65D3500427AC1 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17EB6829B65D3500427AC1 /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,12 @@
 		5C17EB4F29B6559700427AC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C17EB5629B655EA00427AC1 /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		5C17EB5729B655EA00427AC1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5C17EB5C29B65A2300427AC1 /* Notera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notera.xcdatamodel; sourceTree = "<group>"; };
+		5C17EB5F29B65B2A00427AC1 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5C17EB6029B65B2A00427AC1 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5C17EB6129B65B2A00427AC1 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5C17EB6229B65B2A00427AC1 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5C17EB6829B65D3500427AC1 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,12 @@
 		5C17EB4729B6559500427AC1 /* Notera */ = {
 			isa = PBXGroup;
 			children = (
+				5C17EB5E29B65B1400427AC1 /* Models */,
 				5C17EB5A29B6563E00427AC1 /* Views */,
+				5C17EB6729B65D2200427AC1 /* Controllers */,
 				5C17EB4E29B6559700427AC1 /* Preview Content */,
 				5C17EB4C29B6559700427AC1 /* Assets.xcassets */,
+				5C17EB5B29B65A2300427AC1 /* Notera.xcdatamodeld */,
 				5C17EB4829B6559500427AC1 /* NoteraApp.swift */,
 			);
 			path = Notera;
@@ -79,6 +94,25 @@
 				5C17EB4A29B6559500427AC1 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5C17EB5E29B65B1400427AC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C17EB5F29B65B2A00427AC1 /* Note+CoreDataClass.swift */,
+				5C17EB6029B65B2A00427AC1 /* Note+CoreDataProperties.swift */,
+				5C17EB6129B65B2A00427AC1 /* Tag+CoreDataClass.swift */,
+				5C17EB6229B65B2A00427AC1 /* Tag+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C17EB6729B65D2200427AC1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C17EB6829B65D3500427AC1 /* PersistenceController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +188,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C17EB4B29B6559500427AC1 /* ContentView.swift in Sources */,
+				5C17EB6329B65B2A00427AC1 /* Note+CoreDataClass.swift in Sources */,
 				5C17EB4929B6559500427AC1 /* NoteraApp.swift in Sources */,
+				5C17EB5D29B65A2300427AC1 /* Notera.xcdatamodeld in Sources */,
+				5C17EB6629B65B2A00427AC1 /* Tag+CoreDataProperties.swift in Sources */,
+				5C17EB6529B65B2A00427AC1 /* Tag+CoreDataClass.swift in Sources */,
+				5C17EB6429B65B2A00427AC1 /* Note+CoreDataProperties.swift in Sources */,
+				5C17EB6929B65D3500427AC1 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +397,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5C17EB5B29B65A2300427AC1 /* Notera.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C17EB5C29B65A2300427AC1 /* Notera.xcdatamodel */,
+			);
+			currentVersion = 5C17EB5C29B65A2300427AC1 /* Notera.xcdatamodel */;
+			path = Notera.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5C17EB3D29B6559500427AC1 /* Project object */;
 }
